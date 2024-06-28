@@ -1,0 +1,45 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+p {
+    color: $grisOscuro;
+    font-size: 1.7rem;
+}
+a {
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: $fuente_principal;
+    margin: calc($separacion / 2) 0;
+    font-weight: 300;
+    text-align: center;
+    color: $grisOscuro;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 2.5rem;
+}

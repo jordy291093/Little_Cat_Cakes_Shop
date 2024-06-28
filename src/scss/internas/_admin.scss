@@ -1,0 +1,97 @@
+//Admin
+.alerta {
+    padding: 1rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-align: center;
+    border-radius: 1rem;
+}
+.error {
+    border: solid 1px $rojo;
+    background-color: $rojo;
+    color: $blanco;
+}
+.exito {
+    border: solid 1px $verde;
+    background-color: $verde;
+    color: $blanco;
+}
+.motivacion {
+    @include grid(2, 2rem);
+    justify-items: center;
+    align-items: center;
+
+    .motivacion__imagen {
+        img {
+            width: 40rem;
+            height: 40rem;
+        }
+    }
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+
+        .motivacion__imagen {
+            img {
+                width: 30rem;
+                height: 30rem;
+            }
+        }
+    }
+}
+
+// Tabla
+.tabla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+table {
+    text-align: center;
+    thead {
+        tr {
+            color: $grisOscuro;
+            background-color: $rosa-tabla;
+
+            th {
+                padding: .5rem;
+                width: 15rem;
+            }
+        }
+    }
+
+    tbody {
+        .datos:nth-child(even) {
+            background-color: $rosa-tabla;
+        }
+
+        tr {
+            color: $grisOscuro;
+            .boton-azul,
+            .boton-rosa,
+            .boton-verde,
+            .boton-naranja {
+                margin-top: 1rem;
+                font-size: small;
+            }
+
+            td {
+                padding: 1rem;
+
+                &.descripcion {
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
+
+// Boton agregar
+.agregar {
+    margin-bottom: 2rem;
+}
+.imagen-small {
+    width: 30rem;
+    margin: 1rem auto;
+}

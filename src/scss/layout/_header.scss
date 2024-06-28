@@ -1,0 +1,86 @@
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.navegacion__logo {
+    a {
+        h1 {
+            font-weight: bold;
+            margin: 0;
+            color: $rosa;
+        }
+    }
+}
+.navegacion__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 1;
+    visibility: visible;
+    
+    @include tablet {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition: visibility .3s ease-in-out, opacity .3s linear, height .3s linear;
+    }
+    @include telefono {
+        flex-direction: column;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition: visibility .3s ease-in-out, opacity .3s linear, height .3s linear;
+    }
+}
+.link__enlace {
+    a {
+        margin: 0 .8rem;
+        font-weight: bold;
+        color: $rosa;
+        transition: .3s;
+
+        @include tablet {
+            // display: block;
+            // text-align: center;
+            // margin-top: 1rem;
+        }
+        @include telefono {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+
+    :hover {
+        border-bottom: 3px solid $rosa;
+    }
+
+}
+
+// Barra para dispositivos mobiles y tablet
+#menu {
+    display: none;
+    @include tablet {
+        display: flex;
+        cursor: pointer;
+        margin-top: 1rem;
+        color: $grisOscuro;
+        font-size: 3rem;
+    }
+}
+
+.mostrar {
+    @include tablet {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        margin: 2rem;
+    }
+}

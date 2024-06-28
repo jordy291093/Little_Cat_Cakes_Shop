@@ -1,0 +1,119 @@
+
+.inicio {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0 0 5rem 10rem;
+    width: 100%;
+    height: 50rem;
+    background-image: url(/build/img/inicio.jpg);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include tablet {
+        padding: 0 0 3rem 5rem;
+    }
+    @include telefono {
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+}
+.inicio__detalles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .detalles__texto {
+        h1 {
+            margin-bottom: 1.5rem;
+            color: $blanco;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+    }
+
+    @include telefono {
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+}
+.mensaje {
+    @include grid(2, 3rem);
+    align-items: center;
+    justify-items: center;
+
+    .mensaje__imagen {
+        img {
+            width: 35rem;
+            height: 40rem;
+        }
+    }
+
+    .mensaje__texto {
+        h3 {
+            font-weight: bold;
+        }
+    }
+
+    @include telefono {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .mensaje__imagen {
+            img {
+                width: 25rem;
+                height: 30rem;
+            }
+        }
+
+        .mensaje__texto {
+            padding: 1rem;
+        }
+    }
+}
+.publicidad {
+    @include grid(2, 0);
+    align-items: center;
+    justify-items: center;
+    .publicidad__texto {
+        h3 {
+            text-align: left;
+            margin: 1rem 0;
+
+            @include tablet {
+                text-align: center;
+            }
+        }
+
+        .ubicacion {
+            margin: 1rem 0;
+            a {
+                color: $grisOscuro;
+
+                i {
+                    font-size: 2.5rem;
+                    color: $rosa;
+                }
+            }
+        }
+    }
+
+    @include tablet {
+        text-align: center;
+    }
+
+    @include telefono {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .publicidad__texto {
+            padding: 1rem;
+        }
+    }
+}

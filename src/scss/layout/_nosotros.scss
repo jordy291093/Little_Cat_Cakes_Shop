@@ -1,0 +1,28 @@
+.nosotros {
+    @include grid(2, 1rem);
+    justify-items: center;
+    align-items: center;
+
+    .nosotros__imagen {
+        img {
+            width: 35rem;
+            height: 40rem;
+        }
+    }
+
+    .nosotros__texto {
+        padding: 1rem;
+    }
+
+    @include telefono {
+        display: flex;
+        flex-direction: column;
+
+        .nosotros__imagen {
+            img {
+                width: 25rem;
+                height: 30rem;
+            }
+        }
+    }
+}

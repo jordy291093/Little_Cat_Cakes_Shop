@@ -1,0 +1,156 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    p {
+        margin: 1rem 0;
+    }
+
+    @include telefono {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.temporada {
+    .card__container {
+        @include grid(3, 4rem);
+        
+        @include tablet {
+            @include grid(2, 4rem);
+        }
+
+        @include telefono {
+            display: flex;
+            flex-direction: column
+        }
+    }
+}
+#index {
+    .card__container {
+        display: flex;
+
+        @include tablet {
+            @include grid(2, 4rem);
+        }
+
+        @include telefono {
+            display: flex;
+            flex-direction: column
+        }
+    }
+}
+.card__container {
+    @include grid(4, 4rem);
+    margin-inline: 1rem;
+    justify-items: center;
+    
+    @include tablet {
+        @include grid(2, 4rem);
+    }
+
+    @include telefono {
+        display: flex;
+        flex-direction: column
+    }
+}
+.card__article {
+    position: relative;
+    overflow: hidden;
+}
+.card__img {
+    width: 28rem;
+    border-radius: 1rem;
+}
+.card__datos {
+    width: 26rem;
+    background-color: $rosa-centro;
+    box-shadow: 0 8px 24px hsl(0, 0%, 0%, .20);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    padding: 1rem;
+    opacity: 0;
+    transition: .3s 1s;
+
+    h2, h3, a {
+        margin: 0 0 .5rem 0
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    .boton-rosa {
+        font-size: small;
+        padding: .5rem 1rem;
+    }
+
+    @include telefono {
+        width: 24rem;
+    }
+}
+.card__descripcion {
+    display: flex;
+    font-size: small;
+    font-weight: 200;
+    margin-bottom: .25rem;
+    font-style: italic;
+}
+.card__titulo {
+    font-size: 1.5rem;
+}
+.card__article:hover
+.card__datos {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+.card__article {
+    &:hover {
+        animation: remove-overflow 2s forwards;
+    }
+    &:not(:hover) {
+        animation: show-overflow 2s forwards;
+    }
+    &:not(:hover) 
+    .card__datos{
+        animation: remove-data 1s forwards;
+    }
+}
+@keyframes show-data {
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(-7rem);
+    }
+}
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+    50% {
+        overflow: hidden;
+    }
+}

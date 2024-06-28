@@ -1,0 +1,27 @@
+.contacto {
+    @include grid(2, 2rem);
+    align-items: center;
+    justify-items: center;
+    .contacto__formulario {
+        
+
+        .formulario__texto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3, p {
+                margin: 0;
+            }
+            p {
+                font-style: italic;
+            }
+        }
+    }
+
+    @include telefono {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

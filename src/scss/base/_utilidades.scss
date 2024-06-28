@@ -1,0 +1,120 @@
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.separador {
+    background-color: $rosa-centro;
+    padding: 1rem;
+    margin: 2rem 0;
+    h2 {
+        margin: 1rem auto;
+    }
+}
+span {
+    font-weight: bold;
+    color: $rosa;
+}
+.logo {
+    img {
+        width: 30rem;
+        height: 30rem;
+    }
+}
+.redes{
+    .fa-facebook {
+        font-size: 2.5rem;
+        margin: 0 .5rem;
+        color: $azul;
+    }
+    .fa-tiktok {
+        font-size: 2.5rem;
+        margin: 0 .5rem;
+        color: $negro;
+    }
+}
+i {
+    &.fa-brands {
+        &.fa-whatsapp {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-left: .5rem;
+            color: $whats;
+        }
+    }
+}
+.contenido__cards {
+    a {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem
+    }
+}
+.nota {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .nota__texto {
+        p {
+            margin: 0;
+            font-style: italic;
+            font-weight: 300;
+
+            i {
+                color: $rosa;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @include telefono {
+        flex-direction: column;
+        padding: 1rem;
+        h2 {
+            margin: 0;
+        }
+    }
+}
+.pass {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .fa-solid {
+        right: 1rem;
+        position: absolute;
+        font-size: 2rem;
+        color: $grisOscuro;
+        cursor: pointer;
+    }
+}
+.envio {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    gap: 2rem;
+}
+// .spinner {
+//     border: 7px solid rgba(0, 0, 0, 0.1);
+//     width: 36px;
+//     height: 36px;
+//     border-radius: 50%;
+//     border-left-color: $rosa;
+//     margin: 0 auto;
+//     margin-top: 20px;
+//     animation: spin 1s ease infinite;
+//     display: none;
+//   }
+  
+//   @keyframes spin {
+//     0% {
+//       transform: rotate(0deg);
+//     }
+  
+//     100% {
+//       transform: rotate(360deg);
+//     }
+// }

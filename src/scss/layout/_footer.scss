@@ -1,0 +1,72 @@
+footer {
+    padding: 1rem;
+    margin-top: 4rem;
+    background-color: $rosa-centro;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+    }
+}
+
+.botones {
+    .facebook,
+    .tiktok,
+    .whatsapp,
+    .email {
+        display: flex;
+        justify-content: end;
+        position: fixed;
+        a {
+            img {
+                width: 4rem;
+                height: 4rem;
+                transition: all .5s ease;
+
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+    .email {
+        bottom: 10rem;
+        right: 1rem;
+    }
+    .tiktok {
+        bottom: 15rem;
+        right: 1rem;
+    }
+    .facebook {
+        bottom: 20rem;
+        right: 1rem;
+    }
+    .whatsapp {
+        bottom: 25rem;
+        right: 1rem;
+    }
+
+    #boton-up {
+        display: flex;
+        justify-content: end;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        cursor: pointer;
+    
+        img {
+            width: 4rem;
+            height: 4rem;
+            transition: all .5s ease;
+    
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}

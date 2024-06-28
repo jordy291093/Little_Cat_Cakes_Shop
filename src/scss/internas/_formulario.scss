@@ -1,0 +1,50 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+
+    fieldset {
+        background-color: $rosa-centro;
+        border: none;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+
+        .opcion {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        legend {
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    label {
+        width: 40rem;
+        display: block;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    input:not([type="submit"]),
+    select,
+    textarea {
+        width: 40rem;
+        padding: 0.5rem 1rem;
+        font-style: italic;
+        font-size: 1.5rem;
+        border: 2px solid $rosa;
+        border-radius: .5rem;
+
+        @include telefono {
+            width: 30rem;
+        }
+    }
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
